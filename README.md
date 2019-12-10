@@ -13,7 +13,7 @@ and anything else that comes to mind.
  In the root directory execute the following. Assumes you have docker and docker compose installed.
  
     docker-compose up --build -d
-    
+
 ### Preview
 
     http://localhost:8000/
@@ -24,3 +24,6 @@ when you are done just execute:
     
 Make sure to persist anything you want to keep into the mounted volume!
 
+### Volume mounting
+
+### Hot Reloading
