@@ -26,4 +26,15 @@ Make sure to persist anything you want to keep into the mounted volume!
 
 ### Volume mounting
 
+Added to the compose file dash service:
+
+        volumes:
+          - .\dash:/home/project/dash 
+
 ### Hot Reloading
+
+### Login to the container
+
+It may become useful later to add bash but for now one can login to the container with 
+
+    ```docker exec -it dash /bin/sh```

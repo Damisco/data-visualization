@@ -5,6 +5,8 @@ services:
   dash:
     container_name: dash
     restart: always
+    volumes:
+      - .\dash:/home/project/dash
     build: ./dash
     ports:
       - "8000:8000"
