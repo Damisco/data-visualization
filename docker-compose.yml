@@ -7,11 +7,12 @@ services:
     restart: always
     volumes:
       - ./dash:/home/project/dash
+      #  .\dash:/home/project/dash <-- for Windows Machines
     build: ./dash
     ports:
       - "8000:8000"
-    command: gunicorn -w 1 -b :8000 app:server
-
+    # Workers 3 helps reolve problem with bad page loads due to thread timeouts
+    command: gunicorn --workers=3 --log-level debug -b :8000 app:server
 
   nginx:
     container_name: nginx

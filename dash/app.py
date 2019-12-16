@@ -31,7 +31,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         id='example-graph-2',
         figure={
             'data': [
-                {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
+                {'x': [1, 2, 3], 'y': [9, 1, 2], 'type': 'bar', 'name': 'SF'},
                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
             ],
             'layout': {
@@ -58,4 +58,4 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, threaded=True)
